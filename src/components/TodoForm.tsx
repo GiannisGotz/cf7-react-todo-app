@@ -1,13 +1,7 @@
 import { useState } from "react";
-
-type Action =
-  | {type: "ADD"; payload: string}
-  | {type: "DELETE"; payload: number}
+import type {TodoFormProps} from "../types";
 
 
-type TodoFormProps = {
-  dispatch: React.Dispatch<Action>;
-};
 
 const TodoForm = ({ dispatch }: TodoFormProps) => {
 
@@ -40,7 +34,7 @@ const TodoForm = ({ dispatch }: TodoFormProps) => {
         />
         <button
           type="submit"
-          className="bg-cf-dark-gray text-white px-4 py-2 rounded"
+          className="bg-cf-gray text-white px-4 py-2 rounded"
         >
           Add
         </button>
